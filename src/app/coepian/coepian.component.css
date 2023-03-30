@@ -1,0 +1,20 @@
+.fullpage{
+    min-height: 50vh;
+    padding: 1%;
+}
+
+.im {
+    margin-left: auto;
+    display:block;
+    margin-right: auto;
+}
+
+.occupied {
+    margin: 2%; 
+    border: solid red 5px;
+}
+
+.unoccupied {
+    margin: 2%; 
+    border: solid rgb(53, 231, 53) 5px;
+}
