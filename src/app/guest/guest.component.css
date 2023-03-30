@@ -2,3 +2,9 @@
     min-height: 50vh;
     padding: 1%;
 }
+
+.im {
+    margin-left: auto;
+    display:block;
+    margin-right: auto;
+}
