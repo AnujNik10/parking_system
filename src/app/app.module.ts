@@ -10,6 +10,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CoepianComponent } from './coepian/coepian.component';
 import { GuestComponent } from './guest/guest.component';
 import { AdminComponent } from './admin/admin.component';
+import { LocateComponent } from './locate/locate.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AdminComponent } from './admin/admin.component';
     CarouselComponent,
     CoepianComponent,
     GuestComponent,
-    AdminComponent
+    AdminComponent,
+    LocateComponent,
   ],
   imports: [
     BrowserModule,
