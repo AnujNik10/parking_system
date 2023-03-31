@@ -11,6 +11,7 @@ import { CoepianComponent } from './coepian/coepian.component';
 import { GuestComponent } from './guest/guest.component';
 import { AdminComponent } from './admin/admin.component';
 import { LocateComponent } from './locate/locate.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LocateComponent } from './locate/locate.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http'
 
 @Component({
   selector: 'app-coepian',
@@ -7,11 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoepianComponent implements OnInit {
 
-  o: boolean = false
+  d: any
+  o: boolean | undefined
   occ : any
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getdata() {
+    return this.http.get('http://localhost:5000/posts');
+  }
 
   ngOnInit(): void {
+
+    this.getdata().subscribe((data) => {
+      this.d=data
+      this.d=JSON.stringify(this.d)
+    });
+
+    console.log(this.d)
+
     if(this.o){
       this.occ='occupied'
     }
@@ -19,5 +33,7 @@ export class CoepianComponent implements OnInit {
       this.occ='unoccupied'
     }
   }
+
+
 
 }
