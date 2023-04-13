@@ -9,6 +9,10 @@
     margin-right: auto;
 }
 
+.im:hover {
+    zoom:110%;
+}
+
 .occupied {
     margin: 2%; 
     border: solid red 5px;

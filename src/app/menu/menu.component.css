@@ -4,9 +4,11 @@
 
 .c {
     margin: 2%;
+    padding: 5%;
 }
 
 .fullpage{
     min-height: 50vh;
     padding: 1%;
 }
+

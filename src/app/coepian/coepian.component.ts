@@ -9,22 +9,26 @@ import { HttpClient, HttpClientModule } from '@angular/common/http'
 export class CoepianComponent implements OnInit {
 
   d: any
-  o: boolean | undefined
+  o: any
   occ : any
   constructor(private http: HttpClient) { }
 
+
+
   getdata() {
-    return this.http.get('http://localhost:5000/posts');
+    return this.http.get('http://localhost:3000/slots');
   }
+
+
 
   ngOnInit(): void {
 
     this.getdata().subscribe((data) => {
-      this.d=data
-      this.d=JSON.stringify(this.d)
+      this.d = data;
+      this.o = this.d[0].status
     });
 
-    console.log(this.d)
+
 
     if(this.o){
       this.occ='occupied'
@@ -33,6 +37,7 @@ export class CoepianComponent implements OnInit {
       this.occ='unoccupied'
     }
   }
+  
 
 
 
