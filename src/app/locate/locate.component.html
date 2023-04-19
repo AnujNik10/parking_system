@@ -1,7 +1,28 @@
 <div class="fullpage">
-
-    <div class="col-md-6">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.989257721794!2d73.85435231500081!3d18.529387573740294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0883858b873%3A0x1d68fbf2cac75519!2sCOEP%20Technological%20University!5e0!3m2!1sen!2sin!4v1680180357702!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="row g-0">
+<div class="col-md-6">
+    <div *ngIf="slot==4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.989257721794!2d73.85435231500081!3d18.529387573740294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0883858b873%3A0x1d68fbf2cac75519!2sCOEP%20Technological%20University!5e0!3m2!1sen!2sin!4v1680180357702!5m2!1sen!2sin" width="600" height="450" style="border:1px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-
+    <div *ngIf="slot==1">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425.8686671208676!2d73.8549103488688!3d18.531075348536522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0881539b981%3A0xb8994e1a1aaf94a1!2sCOEP%20Electronics%20and%20Telecommunication%20(Extension%20Building)!5e0!3m2!1sen!2sin!4v1681452665663!5m2!1sen!2sin" width="600" height="450" style="border:1px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div *ngIf="slot==3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1596.6638278193739!2d73.8567751563588!3d18.53091225569568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c088385a4e43%3A0x88f68b453a3ad2b!2sCOEP%20Academic%20Complex!5e0!3m2!1sen!2sin!4v1681452946427!5m2!1sen!2sin" width="600" height="450" style="border:1px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+    </div>
+    <div *ngIf="slot==2">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d945.7392158073263!2d73.85512142493474!3d18.53085137636292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08839825e65%3A0x136f04df3903fdae!2sDepartment%20of%20Instrumentation%20%26%20Control!5e0!3m2!1sen!2sin!4v1681453166974!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+    </div>
+    <div *ngIf="slot==5">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d265.1982577559237!2d73.8563968974842!3d18.52915323612882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0627d86e037%3A0x47ba01226069c86b!2sMain%20Building%2C%20COEP!5e0!3m2!1sen!2sin!4v1681668864626!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
+</div>
+<div class="col-md-6">
+    <ul>
+        <li><button style="margin: 2%;" class="btn btn-light but" (click)="set1()">Extension Buliding</button></li>
+        <li><button style="margin: 2%;" class="btn btn-light but" (click)="set2()">Instrumentation Department</button></li>
+        <li><button style="margin: 2%;" class="btn btn-light but" (click)="set3()">Academic Complex</button></li>
+        <li><button style="margin: 2%;" class="btn btn-light but" (click)="set4()">ENTC Building</button></li>
+    </ul>
+</div>
+</div>
 </div>
