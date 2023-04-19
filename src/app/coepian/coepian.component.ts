@@ -1,45 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http'
-
-
+import axios from 'axios';
 @Component({
   selector: 'app-coepian',
   templateUrl: './coepian.component.html',
-  styleUrls: ['./coepian.component.css']
+  styleUrls: ['./coepian.component.css'],
 })
 export class CoepianComponent implements OnInit {
-
   d: any
-  o: any
-  occ : any
-  constructor(private http: HttpClient) { }
-
-
-
-  getdata() {
-    return this.http.get('http://localhost:3000/slots');
-  }
-
-
+  o: boolean = false;
+  occ: any;
+  constructor() {}
 
   ngOnInit(): void {
-
-    this.getdata().subscribe((data) => {
-      this.d = data;
-      this.o = this.d[0].status
+    axios.get('https://smart-parking-system-server.vercel.app/')
+    .then((resp:any)=>{
+      console.log(resp.data)
+      this.d = resp.data;
     });
 
-
-
-    if(this.o){
-      this.occ='occupied'
-    }
-    else{
-      this.occ='unoccupied'
+    // console.log(resp);
+    if (this.o) {
+      this.occ = 'occupied';
+    } else {
+      this.occ = 'unoccupied';
     }
   }
-  
-
-
-
 }
