@@ -6,23 +6,24 @@ import axios from 'axios';
   styleUrls: ['./coepian.component.css'],
 })
 export class CoepianComponent implements OnInit {
-  d: any
-  o: boolean = false;
-  occ: any;
+  d: any[] = [];
+  occ: any[] = [];
   constructor() {}
 
   ngOnInit(): void {
     axios.get('https://smart-parking-system-server.vercel.app/')
     .then((resp:any)=>{
-      console.log(resp.data)
       this.d = resp.data;
+      this.d.forEach((item :any) => {
+        if(item.data == '0'){
+          this.occ.push('occupied')
+        }
+        else{
+          this.occ.push('unoccupied')
+        }
+      });
     });
 
-    // console.log(resp);
-    if (this.o) {
-      this.occ = 'occupied';
-    } else {
-      this.occ = 'unoccupied';
-    }
+    
   }
 }
