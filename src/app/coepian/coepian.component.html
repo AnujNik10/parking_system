@@ -2,36 +2,12 @@
     <div class="row g-0" style="margin: 5%;" >
         <div class="col-md-3" style="padding: 2%;" *ngFor="let item of d;let i = index">
             <div class="card mb-3" class="{{occ[i]}}">
-                <img src="../assets/slot.jpeg" height="100px" width="100px" class="im">
+                <img src="../assets/slot.jpg" height="100px" width="100px" class="im">
             </div>
             <div class="row g=0"><p style="text-align: center;">Slot 1</p></div>
             <div class="row g=0"><p style="text-align: center;">{{item?.location}}</p></div>
             <div class="row g=0"><p style="text-align: center; color: blue; font-size: 12px;">TimeStamp: {{item?.timeStamp}}</p></div>
         </div>
-        <!-- <div class="col-md-3" style="padding: 2%;">
-            <div class="card mb-3" class="{{occ[1]}}">
-                <img src="../assets/slot.jpeg" height="100px" width="100px" class="im"> 
-            </div>
-            <div class="row g=0"><p style="text-align: center;">Slot 2</p></div>
-            <div class="row g=0"><p style="text-align: center;">Instrumentation Department</p></div>
-            <div class="row g=0"><p style="text-align: center; color: blue; font-size: 12px;">TimeStamp: {{d?.[1]?.timeStamp}}</p></div>
-        </div>
-        <div class="col-md-3" style="padding: 2%;">
-            <div class="card mb-3" class="{{occ[2]}}">
-                <img src="../assets/slot.jpeg" height="100px" width="100px" class="im"> 
-            </div>
-            <div class="row g=0"><p style="text-align: center;">Slot 3</p></div>
-            <div class="row g=0"><p style="text-align: center;">Academic Complex</p></div>
-            <div class="row g=0"><p style="text-align: center; color: blue; font-size: 12px;">TimeStamp: {{d?.[2]?.timeStamp}}</p></div>
-        </div>
-        <div class="col-md-3" style="padding: 2%;">
-            <div class="card mb-3" class="{{occ[3]}}">
-                <img src="../assets/slot.jpeg" height="100px" width="100px" class="im"> 
-            </div>
-            <div class="row g=0"><p style="text-align: center;">Slot 4</p></div>
-            <div class="row g=0"><p style="text-align: center;">ENTC Building</p></div>
-            <div class="row g=0"><p style="text-align: center; color: blue; font-size: 12px;">TimeStamp: {{d?.[3]?.timeStamp}}</p></div>
-        </div> -->
     </div>
 
 
