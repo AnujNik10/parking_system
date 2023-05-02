@@ -12,6 +12,10 @@ import { GuestComponent } from './guest/guest.component';
 import { AdminComponent } from './admin/admin.component';
 import { LocateComponent } from './locate/locate.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GatewayComponent } from './gateway/gateway.component';
+import { BookComponent } from './book/book.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     GuestComponent,
     AdminComponent,
     LocateComponent,
+    GatewayComponent,
+    BookComponent,
   ],
   imports: [
     BrowserModule,

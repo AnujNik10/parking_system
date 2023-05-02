@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import axios from 'axios';
 
 @Component({
-  selector: 'app-coepian',
-  templateUrl: './coepian.component.html',
-  styleUrls: ['./coepian.component.css'],
+  selector: 'app-book',
+  templateUrl: './book.component.html',
+  styleUrls: ['./book.component.css']
 })
-export class CoepianComponent implements OnInit {
+export class BookComponent implements OnInit {
+
+  constructor(private router: Router) { }
+
   d: any[] = [];
   occ: any[] = [];
-  constructor() {}
 
   ngOnInit(): void {
     axios.get('https://smart-parking-system-server.vercel.app/')
@@ -27,4 +30,10 @@ export class CoepianComponent implements OnInit {
 
     
   }
+
+  gotoGateway(id: any) {
+    this.router.navigate(['/gateway', id]);
+    console.log('OKKKKK')
+  }
+
 }
