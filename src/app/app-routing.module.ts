@@ -8,6 +8,8 @@ import { MenuComponent } from './menu/menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GatewayComponent } from './gateway/gateway.component';
 import { BookComponent } from './book/book.component';
+import { LoginComponent } from './login/login.component';
+
 
 
 const routes: Routes = [
@@ -18,7 +20,7 @@ const routes: Routes = [
   { path: 'locate', component: LocateComponent},
   { path: 'gateway/:id', component: GatewayComponent},
   { path: 'book', component: BookComponent},
-
+  { path: 'login', component: LoginComponent},
 ];
 
 @NgModule({

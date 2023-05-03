@@ -14,6 +14,7 @@ import { LocateComponent } from './locate/locate.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GatewayComponent } from './gateway/gateway.component';
 import { BookComponent } from './book/book.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -30,6 +31,7 @@ import { BookComponent } from './book/book.component';
     LocateComponent,
     GatewayComponent,
     BookComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
