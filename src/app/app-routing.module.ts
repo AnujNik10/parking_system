@@ -11,6 +11,7 @@ import { BookComponent } from './book/book.component';
 import { LoginComponent } from './login/login.component';
 import { MyplacesComponent } from './myplaces/myplaces.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'book', component: BookComponent},
   { path: 'login', component: LoginComponent},
   { path: 'myplaces', component: MyplacesComponent},
-  { path: 'contactus', component: ContactusComponent}
+  { path: 'contactus', component: ContactusComponent},
+  { path: 'signup', component: SignupComponent},
 ];
 
 @NgModule({

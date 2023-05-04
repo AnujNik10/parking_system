@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyplacesComponent } from './myplaces/myplaces.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -38,6 +39,7 @@ import { ContactusComponent } from './contactus/contactus.component';
     LoginComponent,
     MyplacesComponent,
     ContactusComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
