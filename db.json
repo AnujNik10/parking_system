@@ -1,7 +1,0 @@
-{
-  "slots": 
-  [{"_id":"6425bbb0c7e3a0cfa685d5e0","status":false,"location":"extension","timeStamp":"2023-03-30T16:41:20.050Z","__v":0},
-  {"_id":"6425bbb2c7e3a0cfa685d5e3","status":false,"location":"instru","timeStamp":"2023-03-30T16:41:22.889Z","__v":0},
-  {"_id":"6425bbb5c7e3a0cfa685d5e6","status":true,"location":"AC","timeStamp":"2023-03-30T16:41:25.612Z","__v":0},
-  {"_id":"6425bbb8c7e3a0cfa685d5e9","status":false,"location":"ENTC","timeStamp":"2023-03-30T16:41:28.328Z","__v":0}]
-}

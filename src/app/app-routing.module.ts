@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GatewayComponent } from './gateway/gateway.component';
 import { BookComponent } from './book/book.component';
 import { LoginComponent } from './login/login.component';
+import { MyplacesComponent } from './myplaces/myplaces.component';
+import { ContactusComponent } from './contactus/contactus.component';
 import { SignupComponent } from './signup/signup.component';
 
 
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'gateway/:id', component: GatewayComponent},
   { path: 'book', component: BookComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'myplaces', component: MyplacesComponent},
+  { path: 'contactus', component: ContactusComponent},
   { path: 'signup', component: SignupComponent},
 ];
 
