@@ -4,11 +4,11 @@
     <div class="loginbox">
         <img src="avatar.jpg" class="avatar">
             <h1>Login Here</h1>
-                <form>
+                <form [formGroup]="loginform" (ngSubmit)="loginUser()">
                     <p>Username</p>
-                    <input type="text" name="" placeholder="Enter Username">
+                    <input type="text" name="" placeholder="Enter Username" formControlName="Username">
                     <p>Password</p>
-                    <input type="password" name="" placeholder="Enter Password">
+                    <input type="password" name="" placeholder="Enter Password"formControlName="Password">
                     <br>
                     <input type="submit" name="" value="Login"><br>
                     <a href="#" >Lost your password?</a><br>
