@@ -1,5 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { FormGroup,  FormBuilder,  Validators, FormControl} from '@angular/forms';
+
 
 
 declare var Razorpay: any;
@@ -12,13 +14,22 @@ declare var Razorpay: any;
 
 export class GatewayComponent implements OnInit {
 
+  form1!: FormGroup
   amount: number= 1000
   key: any
   flag: boolean=true
 
-  constructor( private route: ActivatedRoute) {}
+  constructor(private fb: FormBuilder, private route: ActivatedRoute) {
+    this.createForm();
+  }
 
-  
+  createForm() {
+    this.form1 = this.fb.group({
+      vehicle_number: ['', Validators.required],
+      image: ['',Validators.required]
+    });
+  }
+
 
   ngOnInit(): void {
 
