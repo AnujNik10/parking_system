@@ -20,7 +20,7 @@ body
     background: #fff;
     padding: 20px;
     margin: 8% auto 0;
-    text-align: center;
+    /* text-align: center; */
 }
 .sign-up-form h1
 {
