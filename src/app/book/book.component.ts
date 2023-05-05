@@ -20,7 +20,7 @@ export class BookComponent implements OnInit {
       console.log(resp)
       this.d = resp.data;
       this.d.forEach((item :any) => {
-        if(item.data == '0'){
+        if(item.status == 'Booked'){
           this.occ.push('occupied')
         }
         else{
@@ -34,8 +34,13 @@ export class BookComponent implements OnInit {
 
   gotoGateway(item: any) {
     console.log(item)
+    if(item.status === "Booked" ){
+      console.log("Bookedddd");
+      
+      return
+    }
     const toPassFrwd = {
-      renterId:item.userId._id,
+      renter:item.userId._id,
       location:item.location,
       parkingType:item.parkingType,
       price:item.price,

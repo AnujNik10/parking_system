@@ -21,3 +21,8 @@
     margin: 2%; 
     border: solid rgb(53, 231, 53) 5px;
 }
+
+.btn-secondary{
+    pointer-events: none !important;
+    cursor: pointer !important;
+}

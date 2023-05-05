@@ -8,7 +8,7 @@
             <div class="row g=0"><span>Place: {{item?.location}}</span> <span>Price:{{item?.price}}</span>  </div>
             <div class="row g=0"><span>Parking Type: {{item?.parkingType}}</span></div>
             <div class="row g=0"><span>Place of: {{item?.userId?.fname + " " + item?.userId?.lname}}</span></div>
-            <button class="btn btn-primary my-2" (click)="gotoGateway(item)">Book</button>
+            <button [ngClass]="{'btn my-2':true,'btn-primary':item.status === 'Available','btn-secondary':item.status === 'Booked'}" (click)="gotoGateway(item)">Book</button>
         </div>
     </div>
 
