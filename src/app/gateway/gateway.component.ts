@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormGroup,  FormBuilder,  Validators, FormControl} from '@angular/forms';
-
+import axios from 'axios';
 
 
 declare var Razorpay: any;
@@ -36,6 +36,9 @@ export class GatewayComponent implements OnInit {
     this.key = this.route.snapshot.paramMap.get("id")
 
   }
+
+
+
   message:any = "";
   paymentId = "";
   error = "";
@@ -95,5 +98,19 @@ export class GatewayComponent implements OnInit {
   onPaymentSuccess(event: any): void {
     this.message = "Payment Successfull! Your slot has been booked.";
     this.flag=false
+    let body= {
+      "license":this.form1.value.image,
+      "vehicleNo":this.form1.value.vehicle_number
+    }
+
+    const formData = new FormData();
+    formData.append('file', this.form1.value.image,"sample");
+    formData.append('file',this.form1.value.vehicle_number);
+    console.log(this.form1.value.image)
+    axios.post('http://localhost:5001/api/tenant/addvehicle',formData,{headers:{"Content-Type": "multipart/form-data",'auth-token':"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDUzNWI4NzRlNzE4MmQxNTk2ZGUyNGEiLCJpYXQiOjE2ODMyNzEwNjh9.EohWdmk5bbstTvq_Z5-6Z5Kr3ODdBqMmpRTasiGbvBU"}}).then((response) => {
+    console.log(response);
+
+    });
   }
 }
+
