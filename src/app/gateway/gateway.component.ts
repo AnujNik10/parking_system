@@ -28,7 +28,6 @@ export class GatewayComponent implements OnInit {
     if (element.files && element.files.length) {
       this.selectedFile = element.files[0];
       console.log(this.selectedFile);
-
     }
   }
   constructor(private fb: FormBuilder, private route: ActivatedRoute) {
@@ -120,6 +119,27 @@ export class GatewayComponent implements OnInit {
       })
       .then((response) => {
         console.log(response);
+        this.route.queryParams.subscribe((params) => {
+          const bookItem = JSON.parse(params['bookItem']);
+          let localItem = localStorage.getItem('smartUser');
+          if (localItem && bookItem) {
+            const user = JSON.parse(localItem);
+            axios
+              .post('http://localhost:5000/api/book/bookslot', bookItem, {
+                headers: { 'auth-token': user.authtoken },
+              })
+              .then((response) => {
+                console.log(response);
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          }
+          else{
+            alert("An error occcured please try again later")
+          }
+          console.log(bookItem);
+        });
       })
       .catch((err) => {
         console.log(err);

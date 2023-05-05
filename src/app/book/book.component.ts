@@ -15,8 +15,9 @@ export class BookComponent implements OnInit {
   occ: any[] = [];
 
   ngOnInit(): void {
-    axios.get('https://smart-parking-system-server.vercel.app/')
+    axios.get('http://localhost:5000/api/renter/allSlots')
     .then((resp:any)=>{
+      console.log(resp)
       this.d = resp.data;
       this.d.forEach((item :any) => {
         if(item.data == '0'){
@@ -31,8 +32,15 @@ export class BookComponent implements OnInit {
     
   }
 
-  gotoGateway(id: any) {
-    this.router.navigate(['/gateway', id]);
+  gotoGateway(item: any) {
+    console.log(item)
+    const toPassFrwd = {
+      renterId:item.userId._id,
+      location:item.location,
+      parkingType:item.parkingType,
+      price:item.price,
+    }
+    this.router.navigate(['/gateway',item.location],{queryParams:{bookItem:JSON.stringify(toPassFrwd)}});
     console.log('OKKKKK')
   }
 

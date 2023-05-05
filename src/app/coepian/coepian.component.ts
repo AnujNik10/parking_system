@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 
+
 @Component({
   selector: 'app-coepian',
   templateUrl: './coepian.component.html',
@@ -11,19 +12,24 @@ export class CoepianComponent implements OnInit {
   occ: any[] = [];
   constructor() {}
 
+
   ngOnInit(): void {
-    axios.get('https://smart-parking-system-server.vercel.app/')
-    .then((resp:any)=>{
-      this.d = resp.data;
-      this.d.forEach((item :any) => {
-        if(item.data == '0'){
-          this.occ.push('occupied')
-        }
-        else{
-          this.occ.push('unoccupied')
-        }
+
+    // setInterval(()=>{
+      axios.get('https://smart-parking-system-server.vercel.app/')
+      .then((resp:any)=>{
+        console.log(resp.data)
+        this.d = resp.data;
+        this.d.forEach((item :any) => {
+          if(item.data == '0'){
+            this.occ.push('occupied')
+          }
+          else{
+            this.occ.push('unoccupied')
+          }
+        });
       });
-    });
+    // },3000)
 
     
   }
