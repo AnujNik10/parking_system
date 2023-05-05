@@ -1,17 +1,29 @@
 <div class="fullpage">
-<div class="row g-0">
-<div class="col-md-6">
-    <div class="loginbox">
+    <div class="row g-0">
+    <div class="col-md-6">
+        <div class="sign-up-form">
             <h1>Login Here</h1>
+                <div *ngIf="error !== '' " class="alert alert-danger"> {{error}} </div>
                 <form [formGroup]="loginform" (ngSubmit)="loginUser()">
-                    <p>Username</p>
+                    <!-- <p>Username</p>
                     <input type="text" name="" placeholder="Enter Username" formControlName="Username">
                     <p>Password</p>
                     <input type="password" name="" placeholder="Enter Password"formControlName="Password">
                     <br>
                     <input type="submit" name="" value="Login"><br>
                     <a href="#" >Lost your password?</a><br>
-                    <a routerLink="/signup" >Don't have an account?Register here</a> 
+                    <a routerLink="/signup" >Don't have an account?Register here</a>  -->
+
+                    <div class="form-group">
+                        <label for="name">Email</label>
+                        <input type="email" formControlName="Username" class="form-control" placeholder="Enter Email Id"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Password</label>
+                        <input type="password" formControlName="Password" class="form-control" placeholder="Enter Password"><br>
+                    </div>
+                    <button type="submit" class="signup-btn">Sign Up</button>
+                    <p>Dont have an account ? <a routerLink="/signup">Sign Up</a></p>
                 </form>
     </div>
 </div>
