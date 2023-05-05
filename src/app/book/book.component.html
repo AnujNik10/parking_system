@@ -4,13 +4,15 @@
             <div class="card mb-3" class="{{occ[i]}}" >
                 <img src="../assets/slot.jpg" height="100px" width="100px" class="im">
             </div>
-            <div class="row g=0"><p >Slot{{i}} </p></div>
+            <div class="row g=0"><p >Slot{{i+1}} </p></div>
             <div class="row g=0"><span>Place: {{item?.location}}</span> <span>Price:{{item?.price}}</span>  </div>
             <div class="row g=0"><span>Parking Type: {{item?.parkingType}}</span></div>
             <div class="row g=0"><span>Place of: {{item?.userId?.fname + " " + item?.userId?.lname}}</span></div>
             <button [ngClass]="{'btn my-2':true,'btn-primary':item.status === 'Available','btn-secondary':item.status === 'Booked'}" (click)="gotoGateway(item)">Book</button>
+            <!-- <button (click)="viewDocument(item.documentUrl)" >View Documents</button> -->
         </div>
     </div>
+    <!-- <img src="{{docSrc}}" class="documentUrl" alt=""> -->
 
 
     <!-- <p>Data here: </p>{{d?.[0]?.status}} -->

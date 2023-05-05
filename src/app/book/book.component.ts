@@ -14,6 +14,8 @@ export class BookComponent implements OnInit {
   d: any[] = [];
   occ: any[] = [];
 
+  docSrc:String=""
+
   ngOnInit(): void {
     axios.get('http://localhost:5000/api/renter/allSlots')
     .then((resp:any)=>{
@@ -47,6 +49,10 @@ export class BookComponent implements OnInit {
     }
     this.router.navigate(['/gateway',item.location],{queryParams:{bookItem:JSON.stringify(toPassFrwd)}});
     console.log('OKKKKK')
+  }
+
+  viewDocument(src:String){
+    this.docSrc=src;
   }
 
 }
