@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-coepian',
@@ -9,7 +11,7 @@ import axios from 'axios';
 export class CoepianComponent implements OnInit {
   d: any[] = [];
   occ: any[] = [];
-  constructor() {
+  constructor(private router: Router) {
     setInterval(() => {
       axios
         .get('https://smart-parking-system-server.vercel.app/')
@@ -25,6 +27,11 @@ export class CoepianComponent implements OnInit {
           });
         });
     }, 3000);
+  }
+
+
+  gotoLocate(location: any){
+    this.router.navigate(['/locate',location]);
   }
 
   ngOnInit(): void {}

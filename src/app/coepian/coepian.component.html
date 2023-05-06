@@ -1,7 +1,8 @@
+<app-navbar></app-navbar>
 <div class="fullpage">
     <div class="row g-0" style="margin: 5%;" >
         <div class="col-md-3" style="padding: 2%;" *ngFor="let item of d;let i = index">
-            <div class="card mb-3" class="{{occ[i]}}">
+            <div class="card mb-3" class="{{occ[i]}}" (click)="gotoLocate(item.location)">
                 <img src="../assets/slot.jpg" height="100px" width="100px" class="im">
             </div>
             <div class="row g=0"><p style="text-align: center;">Slot {{i+1}} </p></div>

@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'coepian', component: CoepianComponent},
   { path: 'guest', component: GuestComponent},
   { path: 'admin', component: AdminComponent},
-  { path: 'locate', component: LocateComponent},
+  { path: 'locate/:location', component: LocateComponent},
   { path: 'gateway/:id', component: GatewayComponent},
   { path: 'book', component: BookComponent},
   { path: 'login', component: LoginComponent},
