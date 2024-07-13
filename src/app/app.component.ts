@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'home';
 
-  constructor(private router:Router){
+  constructor(private router: Router) {
     let user = localStorage.getItem("smartUser")
-    if(!user && window.location.pathname != "/signup"){
+    if (!user && window.location.pathname != "/signup") {
       // console.log(window.location.pathname);
-      this.router.navigateByUrl("/login")
+      // this.router.navigateByUrl("/login")
     }
   }
 }

@@ -52,7 +52,7 @@ export class GatewayComponent implements OnInit {
   options = {
     key: 'rzp_test_ywM4wfXGDGHATc',
     amount: '200000',
-    name: 'Aniket Nikhade',
+    name: 'Parking System Ltd.',
     description: 'Web Development',
     image: '../assets/slot.jpg',
     order_id: '',
@@ -135,7 +135,7 @@ export class GatewayComponent implements OnInit {
                 console.log(err);
               });
           }
-          else{
+          else {
             alert("An error occcured please try again later")
           }
           console.log(bookItem);
